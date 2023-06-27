@@ -1,0 +1,25 @@
+<div class="">
+  <mdb-navbar-brand>
+    <a class="navbar-brand" href="#"><img src="../assets/images/reddit_logo.png" alt="">Reddit</a>
+  </mdb-navbar-brand>
+
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item" >
+      <a class="nav-link waves-light" routerLink="/addGroup" mdbWavesEffect>Add group</a>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav mr-auto flex">
+    <li class="nav-item">
+      <a class="dropdown-item" href="#" routerLink="/userAccountData">Your profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="dropdown-item" href="#" routerLink="/changePassword">Change password</a>
+    </li>
+    <li class="nav-item">
+      <a class="dropdown-item" href="#" (click)="logOut()">Log out</a>
+    </li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>

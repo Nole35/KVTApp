@@ -1,0 +1,49 @@
+<div class="container d-flex justify-content-center my-5">
+  <div class="row my-2 mx-2 main">
+
+
+    <div class="form">
+      <div class="centerDiv">
+        <h2>Sign up</h2>
+      </div>
+
+      <form class="reactiveForm" [formGroup]="userForm" novalidate>
+        <div>
+          <input name="username" formControlName="username" [(ngModel)] = "newUser.username"  type="text" placeholder="Username">
+
+          <div *ngIf="userForm.controls['username'].invalid && userForm.controls['username'].touched" class="alert alert-danger">
+            <div *ngIf="userForm.controls['username'].errors?.['required']">Username is required.</div>
+          </div>
+        </div>
+
+        <div >
+          <input name="email" type="text" [(ngModel)] = "newUser.email" formControlName="email" placeholder="Email">
+
+          <div *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched" class="alert alert-danger">
+            <div *ngIf="userForm.controls['email'].errors?.['required']">Email is required.</div>
+            <div *ngIf="userForm.controls['email'].errors?.['pattern']">Email must like example@gmail.com</div>
+          </div>
+
+
+        </div>
+
+        <div >
+          <input name="password" type="password" [(ngModel)] = "newUser.password" formControlName="password" placeholder="Password">
+          <div *ngIf="userForm.controls['password'].invalid && userForm.controls['password'].touched" class="alert alert-danger">
+            <div *ngIf="userForm.controls['password'].errors?.['required']">Password is required.</div>
+            <div *ngIf="userForm.controls['password'].errors?.['pattern']">Minimum eight characters, at least one uppercase letter, one lowercase letter and one number!</div>
+          </div>
+        </div>
+
+        <div class="centerDiv">
+          <button type="submit" (click)="signUpClick()">Create account</button>
+        </div>
+
+        <div class="centerDiv">
+          <p>Already have account?<a href="#" routerLink="/logIn"> Log In</a></p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

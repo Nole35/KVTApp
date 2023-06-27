@@ -1,0 +1,36 @@
+<div class="container d-flex justify-content-center my-5">
+  <div class="row my-2 mx-2 main">
+
+
+    <div class="form">
+      <div class="centerDiv">
+        <h2>Log in</h2>
+      </div>
+
+      <form>
+        <div>
+          <input name="username" [(ngModel)] = "newUser.username" type="text" placeholder="Username">
+        </div>
+
+        <div >
+          <input name="password" [(ngModel)] = "newUser.password" type="password" placeholder="Password">
+        </div>
+
+        <div *ngIf="wrongUsernameOrPass" class="text-danger">
+          <small>Invalid username or password!</small>
+        </div>
+
+        <div class="centerDiv">
+          <button type="submit" (click)="login()">Log in</button>
+        </div>
+
+        <div class="centerDiv">
+          <p>You dont have account?<a href="#" routerLink="/signUp"> Sign Up</a></p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+

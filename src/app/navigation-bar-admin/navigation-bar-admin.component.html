@@ -1,0 +1,26 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark orange" [containerInside]="false">
+
+  <mdb-navbar-brand>
+    <a class="navbar-brand" href="#"><img src="../assets/images/reddit_logo.png" alt="">Reddit</a>
+  </mdb-navbar-brand>
+
+  <links>
+
+
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link">
+          <div class="btn-group" mdbDropdown>
+            <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+            <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+              <a class="dropdown-item" href="#" (click)="logOut()">Log out</a>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </links>
+
+</mdb-navbar>
+
+<router-outlet></router-outlet>
