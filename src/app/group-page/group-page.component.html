@@ -1,0 +1,35 @@
+<div class="navigationBtn">
+<!--  <button (click)="goToRules()">Community rules</button>-->
+<!--  <button (click)="goToFlairs()">Flairs</button>-->
+  <button *ngIf="groupAdmin || user" (click)="goToAddPost()">Add post</button>
+
+</div>
+
+<div class="navigationBtn">
+  <div class="card" style="width: 30rem;">
+    <div class="card-body">
+      <h5 class="card-title" *ngIf="group"> <b>Group name:</b>  
+        {{group.name}}
+        <ng-container *ngIf="canDelete">
+          <button type="button" (click)="deleteGroup(group.groupId)">DELETE</button>
+          <button type="button" (click)="changeGroup()">CHANGE</button>
+        </ng-container>
+      </h5>
+      <p class="card-text" *ngIf="group" ><b>Description:</b> {{group.description}}</p>
+      <div class="form-group card-header" *ngIf="canEdit">
+        <h5><b>Change description</b></h5>
+        <input type="text" class="form-control item" name="desc"  id="desc" [(ngModel)] = "group.description">
+        <h5><b>Change name</b></h5>
+        <input type="text" class="form-control item" name="name"  id="name" [(ngModel)] = "group.name">
+        <br />
+        <button class="blueBtn" (click)="changeContentSumbit(group)">SUBMIT</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--<app-card-post-community [groupId]="groupId"></app-card-post-community>-->
+
+<router-outlet></router-outlet>

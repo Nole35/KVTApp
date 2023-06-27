@@ -1,0 +1,10 @@
+
+
+
+<div class="centerDiv">
+  <ul class="list-group" style="width: 400px;">
+    <li class="list-group-item oneGroup" *ngFor="let group of listGroup" (click)="goToGroup(group.groupId)" >
+      {{group.name}}
+    </li>
+  </ul>
+</div>

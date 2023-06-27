@@ -1,0 +1,10 @@
+<script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+
+<div class="col-md-6 gedf-main container">
+  <div class="card gedf-card" *ngFor="let post of postList" >
+    <app-single-post [post]="post" (changed)="changed($event)"></app-single-post>
+
+  </div>
+
+</div>
