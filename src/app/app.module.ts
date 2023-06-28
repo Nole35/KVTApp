@@ -67,35 +67,7 @@ import {MatInputModule} from "@angular/material/input";
     AddPostComponent,
     NavigationBarAdminComponent
   ],
-//     imports: [
-//       BrowserModule,
-//       HttpClientModule,
-//         RouterModule,
-//         FormsModule,
-//         ReactiveFormsModule,
-//         // NavbarModule,
-//         MDBBootstrapModule,
-//          MatDialogModule,
-//          BrowserAnimationsModule,
-//       RouterModule.forRoot([]),
-//       AppRoutingModule
-//
-//
-//     ],
-//   providers: [
-//     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
-//     AuthenticationService,
-//     CanActivateAuthGuard,
-//     CustomvalidationService,
-//     JwtUtilsService,
-//     TokenInterceptorService,
-//     JwtHelperService,
-//     GroupPageComponent
-//
-//   ],
-//
-//   bootstrap: [AppComponent]
-// })
+
   imports: [
     BrowserModule,
     AppRoutingModule,

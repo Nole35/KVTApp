@@ -1,0 +1,34 @@
+<div class="card-header">
+  <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex justify-content-between align-items-center">
+
+      <div class="ml-2">
+        <div class="h5 m-0" *ngIf="user.lastName">
+          <p>{{"@" + user.lastName}}</p>
+        </div>
+        <div class="h5 m-0" *ngIf="!user.lastName">
+          <p>{{"@" + user.username}}</p>
+        </div>
+        <a (click)="groupClick(post.group)" >{{"@" + group.name}}</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<div>
+
+
+
+  <p class="card-text">{{post.content}}</p>
+</div>
+<div class="card-footer">
+  <i (click)="likeBtn(post.postId)" class="bi bi-hand-thumbs-up" style="cursor: pointer;"></i>
+  <a class="card-link blue-text">{{karma.karma}}</a>
+  <i (click)="dislikeBtn(post.postId)" class="bi bi-hand-thumbs-down" style="cursor: pointer;"></i>
+
+
+
+</div>
+
+

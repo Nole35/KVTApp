@@ -1,0 +1,45 @@
+<div class="col-md-6 gedf-main container" style="margin-top: 20px;">
+  <div class="card gedf-card" *ngFor="let post of postList" style="margin-bottom: 20px;">
+    <div class="card-header">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-between align-items-center">
+
+          <div class="ml-2" *ngIf="!user.lastName">
+            <div class="h5 m-0"><p>{{"@" + user.username}}</p>
+            </div>
+          </div>
+
+          <div class="ml-2" *ngIf="user.lastName">
+            <div class="h5 m-0"><p>{{"@" + user.lastName}}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <p class="card-text">{{post.content}}</p>
+    </div>
+
+    <div class="form-group card-header" *ngIf="this.isButtonVisible">
+      <h5><b>Change post content</b></h5>
+      <input type="text" class="form-control item" name="postText"  id="postContent" [(ngModel)] = "post.content">
+      <button class="blueBtn" (click)="changeContentSumbit(post)">SUBMIT</button>
+    </div>
+
+
+
+
+    <div class="card-footer">
+      <div class="centerContent">
+        <button (click)="izmenaContenta()" class="blueBtn">CHANGE CONTENT</button>
+        <button (click)="deletePost(post.postId)" class="redBtn">DELETE</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+

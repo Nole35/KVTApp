@@ -66,13 +66,6 @@ export class GroupPageComponent implements OnInit {
 
   }
 
-  // goToRules():void{
-  //   this.routers.navigate(['/communityRules/' + this.communityId], { state: { id:  this.communityId} });
-  // }
-  //
-  // goToFlairs():void{
-  //   this.routers.navigate(['/communityFlairs/' + this.communityId], { state: { id:  this.communityId} });
-  // }
 
   goToAddPost():void{
     this.routers.navigate(['/addPost/' + this.groupId], { state: { id:  this.groupId} });

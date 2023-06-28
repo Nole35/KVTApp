@@ -24,7 +24,7 @@ export class UserService{
 
 
 
-  getAllModerators():Observable<User[]>{
+  getAllGroupAdmins():Observable<User[]>{
     return this.http.get<User[]>(this.path+`/onlyGroupAdmins`);
   }
 

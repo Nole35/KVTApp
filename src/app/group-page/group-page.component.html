@@ -1,6 +1,4 @@
 <div class="navigationBtn">
-<!--  <button (click)="goToRules()">Community rules</button>-->
-<!--  <button (click)="goToFlairs()">Flairs</button>-->
   <button *ngIf="groupAdmin || user" (click)="goToAddPost()">Add post</button>
 
 </div>
@@ -8,7 +6,7 @@
 <div class="navigationBtn">
   <div class="card" style="width: 30rem;">
     <div class="card-body">
-      <h5 class="card-title" *ngIf="group"> <b>Group name:</b>  
+      <h5 class="card-title" *ngIf="group"> <b>Group name:</b>
         {{group.name}}
         <ng-container *ngIf="canDelete">
           <button type="button" (click)="deleteGroup(group.groupId)">DELETE</button>
@@ -30,6 +28,5 @@
 
 
 
-<!--<app-card-post-community [groupId]="groupId"></app-card-post-community>-->
 
 <router-outlet></router-outlet>

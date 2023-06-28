@@ -1,0 +1,40 @@
+<form class="formContainer">
+
+  <div class="centerContent">
+    <h3>ADD POST</h3>
+  </div>
+
+  <form [formGroup]="postForm" novalidate>
+
+    <div class="form-group row" *ngIf="newPost">
+
+
+    <div class="form-group row">
+      <label for="inputContent" class="col-sm-2 col-form-label">Content</label>
+      <div class="col-sm-10">
+        <input name="text" formControlName="text" [(ngModel)] = "newPost.content" mdbInput type="text" class="form-control" id="inputContent" placeholder="Content">
+
+        <div *ngIf="postForm.controls['text'].invalid && postForm.controls['text'].touched" class="alert alert-danger">
+          <div *ngIf="postForm.controls['text'].errors?.['required']">Text is required.</div>
+        </div>
+
+      </div>
+    </div>
+
+   </div>
+
+  </form>
+
+
+
+  <div class="centerContent">
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button (click)="createPost()" type="submit" mdbBtn color="blue">Submit</button>
+      </div>
+    </div>
+  </div>
+
+
+</form>
+

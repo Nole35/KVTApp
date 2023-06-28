@@ -15,7 +15,7 @@ export class NavigationBarUserComponent implements OnInit {
 
 
   public user : boolean = false
-  public blockUser : boolean = false
+
 
   private logUser: User = {
     userId: 0,
@@ -30,7 +30,7 @@ export class NavigationBarUserComponent implements OnInit {
 
 
 
-  // token : string;
+
   token:string = "";
   uloga:any;
 
