@@ -1,0 +1,28 @@
+<div class="registration-form">
+  <form [formGroup]="userForm" novalidate>
+    <div class="centerDiv">
+      <h2>Account data</h2>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control item" formControlName="email"  [(ngModel)] = "user.email" name="email"  id="email" placeholder="Email" readonly>
+      <div *ngIf="userForm.controls['email'].invalid && userForm.controls['email'].touched" class="alert alert-danger">
+        <div *ngIf="userForm.controls['email'].errors?.['required']">Email is required.</div>
+        <div *ngIf="userForm.controls['email'].errors?.['pattern']">Email must like example@gmail.com</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control item" [(ngModel)] = "user.firstName" formControlName="firstName" id="firstName" placeholder="Firstname">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control item" [(ngModel)] = "user.lastName" formControlName="lastName" id="lastName" placeholder="Lastname">
+    </div>
+
+
+
+
+    <div class="form-group">
+      <button type="button" class="btn btn-block create-account" (click)="submit(user.userId)" >{{btnValue}}</button>
+    </div>
+  </form>
+
+</div>
